@@ -1,0 +1,261 @@
+/*!
+ * Roots 6.5.2
+ */
+
+@import "bootstrap/bootstrap.less";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+  padding-top: 0;
+}
+
+
+/* ==========================================================================
+   Icons
+   ========================================================================== */
+
+@font-face {
+  font-family: 'aoaicons';
+  src:url('@{icon-font-path}aoaicons.eot?uf1eei');
+  src:url('@{icon-font-path}aoaicons.eot?#iefixuf1eei') format('embedded-opentype'),
+    url('@{icon-font-path}aoaicons.woff?uf1eei') format('woff'),
+    url('@{icon-font-path}aoaicons.ttf?uf1eei') format('truetype'),
+    url('@{icon-font-path}aoaicons.svg?uf1eei#aoaicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="aoaicon-"], [class*=" aoaicon-"] {
+  font-family: 'aoaicons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.aoaicon-twitter:before {
+  content: "\e600";
+
+}
+.aoaicon-facebook:before {
+  content: "\e601";
+}
+.aoaicon-instagram:before {
+  content: "\e602";
+}
+.aoaicon-google-plus:before {
+  content: "\e603";
+}
+.aoaicon-feed:before {
+  content: "\e604";
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.logo, .nav-main {
+  padding-bottom: 15px;
+}
+
+.header_newsletter {
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.navbar-static-top {
+  border: 0px;
+}
+
+.navbar-default {
+  font-size: 16px;
+  .navbar-nav>li>a {
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
+  }
+}
+
+.search-form {
+  width: 250px;
+  padding-top: 15px;
+}
+
+.search-field {
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  position: relative;
+  z-index: 2;
+  border: 0;
+  float: left;
+  margin-bottom: 0px;
+  display: table-cell;
+  height: 31px;
+  padding: 6px 12px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  &:focus {
+    border-color: #ceb590;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(206, 181, 144, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(206, 181, 144, 0.6);
+  }
+}
+
+
+/* ==========================================================================
+   Social Icons
+   ========================================================================== */
+
+.socialicons {
+  font-size: 2em;
+  text-align: center;
+}
+
+a.aoaicon-twitter {
+    color: #fff;
+    &:hover {
+      color: #00aced;
+      text-decoration: none;
+    }
+}
+
+a.aoaicon-facebook {
+    color: #fff;
+    &:hover {
+      color: #3b579d;
+      text-decoration: none;
+    }
+}
+
+a.aoaicon-instagram {
+    color: #fff;
+    &:hover {
+      color: #dbd2c3;
+      text-decoration: none;
+    }
+}
+
+a.aoaicon-feed {
+    color: #fff;
+    &:hover {
+      color: #FF6600;
+      text-decoration: none;
+    }
+}
+
+a.aoaicon-google-plus {
+    color: #fff;
+    &:hover {
+      color: #c12026;
+      text-decoration: none;
+    }
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.entry-title {
+  text-align: center;
+}
+
+.entrymeta {
+  text-align: center;
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+.hentry {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+.sidebar_destinations {
+  margin-top: 75px;
+}
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info {
+  background: #381e17;
+  
+  p {
+    color: #fff;
+    margin-top: 10px;
+  }
+}
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm-min) { }
+
+@media (min-width: @screen-md-min) { }
+
+@media (min-width: @screen-lg-min) { }
