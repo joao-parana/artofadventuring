@@ -14,6 +14,7 @@ $cover_url = wp_get_attachment_image_src($cover_id,'coverhero', true);
             <article>
               <h1 class="entry-title"><?php the_title(); ?></h1>
               <?php get_template_part('templates/entry-meta'); ?>
+              <div class="categorylist">Posted in: <?php echo get_the_category_list(' // '); ?></div>
             </article>
           </div>
         </div>
