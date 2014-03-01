@@ -43,7 +43,7 @@
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-sans-serif;
+@font-family-base:        "ff-tisa-sans-web-pro",sans-serif;
 
 @font-size-base:          17px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -62,7 +62,7 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
+@headings-font-family:    "adelle",serif;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
@@ -334,7 +334,7 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             #fff;
-@navbar-default-bg:                #381e17;
+@navbar-default-bg:                transparent;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
@@ -360,7 +360,7 @@
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @gray-light;
-@navbar-inverse-bg:                         #222;
+@navbar-inverse-bg:                         transparent;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
@@ -409,7 +409,7 @@
 @nav-tabs-justified-active-link-border-color:     @body-bg;
 
 //== Pills
-@nav-pills-border-radius:                   0;
+@nav-pills-border-radius:                   4px;
 @nav-pills-active-link-hover-bg:            #8d8a32;
 @nav-pills-active-link-hover-color:         #fff;
 
