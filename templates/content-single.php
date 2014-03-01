@@ -44,19 +44,21 @@ $cover_url = wp_get_attachment_image_src($cover_id,'coverhero', true);
           </div>
         </div>
         <section>
-          <form class="header_newsletter" role="form">
+          <form class="article_newsletter" method="post" name="mc-embedded-subscribe-form" role="form" action="http://artofadventuring.us2.list-manage.com/subscribe/post?u=1014ab0bbffc2795b59456be0&amp;id=6a468de608">
+          <h3>Get Email Updates on New Articles</h3>
             <div class="input-group">
               <input type="email" class="form-control" placeholder="Get Email Updates" required>
               <span class="input-group-btn">
-                <button class="btn btn-default" type="submit">Subscribe</button>
+                <button class="btn btn-primary" type="submit">Subscribe</button>
               </span>
             </div>
             <label class="checkbox-inline">
-              <input type="checkbox" id="inlineCheckbox1" value="option1"> Daily
+              <input type="checkbox" id="inlineCheckbox1" name="group[5][1]" value="1"> Daily
             </label>
             <label class="checkbox-inline">
-              <input type="checkbox" id="inlineCheckbox2" value="option2"> Weekly
+              <input type="checkbox" id="inlineCheckbox2" ame="group[5][2]" value="2" checked> Weekly
             </label>
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_1014ab0bbffc2795b59456be0_6a468de608" value=""></div>
           </form> <!-- /newsletter-group -->
         </section>
 
