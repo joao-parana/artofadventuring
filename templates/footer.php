@@ -7,11 +7,11 @@
 	  </div>
 	  <div class="col-md-6">
 		  <div class="socialicons pull-right">
-		    <a href="" target="_blank" class="aoaicon-twitter"></a>
-		    <a href="" target="_blank" class="aoaicon-facebook"></a>
-		    <a href="" target="_blank" class="aoaicon-instagram"></a>
-		    <a href="" target="_blank" class="aoaicon-google-plus"></a>
-		    <a href="" target="_blank" class="aoaicon-feed"></a>
+		    <a href="http://twitter.com/artofadventurin" target="_blank" class="aoaicon-twitter"></a>
+		    <a href="https://www.facebook.com/artofadventuring" target="_blank" class="aoaicon-facebook"></a>
+		    <a href="http://instagram.com/artofadventurin" target="_blank" class="aoaicon-instagram"></a>
+		    <a href="https://plus.google.com/+MichaelTieso/posts" target="_blank" class="aoaicon-google-plus"></a>
+		    <a href="http://feeds.artofadventuring.com/artofadventuring" target="_blank" class="aoaicon-feed"></a>
 		  </div>
 	  </div>
   </div>
