@@ -4,6 +4,7 @@
 	<div class="row">
 		<div class="col-sm-8">
 			<?php echo do_shortcode('[facetwp template="front_page"]'); ?>
+			<?php echo do_shortcode('[facetwp pager="true"]'); ?>
 			<?php if ($wp_query->max_num_pages > 1) : ?>
 			  <nav class="post-nav">
 			    <ul class="pager">

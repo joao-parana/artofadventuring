@@ -8,10 +8,10 @@
   ========================================================================== */
 
 function my_facetwp_index_row( $params ) {
-    $excluded = array( 'USA' );
+    $excluded = array( 'Article' );
 
     // Ignore this value if it's in the above list
-    if ( 'front_page' == $params['facet_name'] && in_array( $params['facet_display_value'], $excluded ) ) {
+    if ( 'categories' == $params['facet_name'] && in_array( $params['facet_display_value'], $excluded ) ) {
         return false;
     }
     return $params;
@@ -83,8 +83,45 @@ add_shortcode("question", "question_shortcode");
 function infobox_shortcode( $atts, $content = null ) {  
     return '
     <div class="infobox">
-    	<span class="glyphicon glyphicon-info-sign"></span>
-			'.$content.'
+  		<span class="glyphicon glyphicon-info-sign"></span></br>
+  		'.$content.'
     </div>';  
 }
 add_shortcode("infobox", "infobox_shortcode");
+
+/* ==========================================================================
+   Category Exclude
+   Controlled by text input under dashboard->settings->reading -> 'Exclude Categories from Home'
+  ========================================================================== */
+
+class custom_exclude_categories {
+    public function custom_exclude_categories() {
+        $this->__construct();
+    }
+    public function __construct() {
+        add_action('admin_init',array($this,'register_setting'),10,0);
+        add_action('admin_menu', array($this,'admin_option_setup'),10,0);
+        add_action('pre_get_posts',array($this,'pre_get_posts'),20,1);
+    }
+    public function register_setting() {
+        register_setting('reading','excluded_categories');
+    }
+    public function admin_option_setup() {
+        add_settings_field( 'excluded_categories_field', __('Exclude Categories from Home', 'custom_lang'), array($this,'excluded_categories_field'), 'reading', 'default' );
+    }
+    public function excluded_categories_field() {
+        $value = get_option('excluded_categories');
+        echo '<p><input type="text" class="large-text code" id="excluded_categories" name="excluded_categories" value="'. $value .'" /></p>';
+        echo '<p class="description">'. __('Enter here comma separated IDs of the categories, if you want them to be excluded from the home page of your blog.','custom_lang') .'</p>';
+    }
+    public function pre_get_posts(&$query) {
+        if (!$query->is_admin && ($query->is_home || ($query->is_feed && !$query->is_category)) && (!isset($query->query_vars['suppress_filters']) || false === $query->query_vars['suppress_filters']) && !$query->is_preview) {
+            if(get_option('excluded_categories') != '') {
+                $excluded = get_option('excluded_categories');
+                $excluded_arr = explode(',',$excluded);
+                $query->set('category__not_in', array_map('intval',$excluded_arr));
+            }
+        }
+    }
+}
+$custom_exclude_categories = new custom_exclude_categories;
