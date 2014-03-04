@@ -58,7 +58,7 @@ $cover_url = wp_get_attachment_image_src($cover_id,'coverhero', true);
           <h3>Written By: <?php the_author_meta( 'display_name') ; ?></h3>
           <div class="row">
             <div class="col-sm-3">
-              <?php echo get_avatar( $id_or_email, $size = '150' ); ?>
+              <?php echo get_avatar( get_the_author_meta( 'ID' ), 150 ); ?>
             </div>
             <div class="col-sm-9">
               <div class="authorbio">
