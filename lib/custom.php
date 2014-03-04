@@ -18,8 +18,6 @@ function my_facetwp_index_row( $params ) {
 }
 add_filter( 'facetwp_index_row', 'my_facetwp_index_row' );
 
-add_filter( 'facetwp_facet_checkbox_show_counts', '__return_false' );
-
 
 /* ==========================================================================
    Custom Widget for Author Box
