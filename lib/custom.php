@@ -8,16 +8,15 @@
   ========================================================================== */
 
 function my_facetwp_index_row( $params ) {
-    $excluded = array( 'Article' );
+    $parent_terms = get_terms( 'destinations', array( 'parent' => 0, 'fields' => 'ids' ) );
 
-    // Ignore this value if it's in the above list
-    if ( 'categories' == $params['facet_name'] && in_array( $params['facet_display_value'], $excluded ) ) {
+    // Don't index if facet_value (term ID) isn't a top-level term
+    if ( 'category' == $params['facet_name'] && ! in_array( $params['facet_value'], $parent_terms ) ) {
         return false;
     }
     return $params;
 }
 add_filter( 'facetwp_index_row', 'my_facetwp_index_row' );
-
 
 /* ==========================================================================
    Custom Widget for Author Box
