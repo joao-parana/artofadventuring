@@ -6,7 +6,7 @@
 // Mixin and adjust the regular image class
 .thumbnail {
   display: block;
-  padding: @thumbnail-padding;
+  padding: 5px;
   margin-bottom: @line-height-computed;
 
   > img,
@@ -18,7 +18,9 @@
 
   // Image captions
   .caption {
-    padding: @thumbnail-caption-padding 60px;
+    padding: @thumbnail-caption-padding 0;
     color: @thumbnail-caption-color;
+    margin-bottom: 15px;
+    text-align: center;
   }
 }
