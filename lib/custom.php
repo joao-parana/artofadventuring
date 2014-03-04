@@ -8,9 +8,9 @@
   ========================================================================== */
 
 function my_facetwp_index_row( $params ) {
-    $parent_terms = get_terms( 'destinations', array( 'child_of' => 1, 'fields' => 'names' ) );
+    $parent_terms = get_terms( 'destinations', array( 'parent' => 0, 'fields' => 'ids' ) );
 
-    // Don't index if facet_value (term ID) isn't a top-level term
+    // Don't index if facet_value isn't a top-level term ID
     if ( 'category' == $params['facet_name'] && ! in_array( $params['facet_value'], $parent_terms ) ) {
         return false;
     }
