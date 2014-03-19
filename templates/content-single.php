@@ -38,7 +38,7 @@ $cover_url = wp_get_attachment_image_src($cover_id,'coverhero', true);
     <div class="col-sm-12 col-md-8 col-md-offset-2">
       <div id="socialbar" data-spy="affix" data-offset-top="600">
         <div id="fb-root"></div>
-        <div class="fb-like" width="100px" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+        <div class="fb-like" width="125px" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
         <a href="https://twitter.com/share" class="twitter-share-button" style="vertical-align: middle;" data-via="artofadventurin" data-related="artofadventurin">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <div  style="vertical-align: middle; display:inline-flex"><div class="g-plusone" data-size="medium"></div></div>
