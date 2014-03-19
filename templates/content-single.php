@@ -1,11 +1,3 @@
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.async=true; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=117549151603649";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <?php while (have_posts()) : the_post(); ?>
 
 <?php
@@ -40,15 +32,8 @@ $cover_url = wp_get_attachment_image_src($cover_id,'coverhero', true);
         <div id="fb-root"></div>
         <div class="fb-like" width="125px" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
         <a href="https://twitter.com/share" class="twitter-share-button" style="vertical-align: middle;" data-via="artofadventurin" data-related="artofadventurin">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        <div  style="vertical-align: middle; display:inline-flex"><div class="g-plusone" data-size="medium"></div></div>
-        <script type="text/javascript">
-        (function() {
-          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-          po.src = 'https://apis.google.com/js/platform.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-        })();
-      </script>
+        <div style="vertical-align: middle; display:inline-flex"><div class="g-plusone" data-size="medium"></div></div>
+        <div style="vertical-align: middle; display:inline-flex"><a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="white"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a></div>
       </div>
       <article <?php post_class(); ?>>
         <div class="entry-content">
