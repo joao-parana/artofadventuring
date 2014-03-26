@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-sm-6">
 			<?php
 				/**
 				 * woocommerce_before_single_product_summary hook
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				do_action( 'woocommerce_before_single_product_summary' );
 			?>
 		</div>
-		<div class="col-md-6">
+		<div class="col-sm-6">
 			<div class="summary entry-summary">
 				<?php
 					/**
