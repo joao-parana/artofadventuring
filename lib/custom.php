@@ -4,6 +4,40 @@
  */
 
 /* ==========================================================================
+   WooCommerce Support
+  ========================================================================== */
+
+add_theme_support( 'woocommerce' );
+
+/* Disable WooCommerce Styling */
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+add_filter('woocommerce_show_page_title', '__return_false');
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+
+/* ==========================================================================
+   Disable Product Review Tab on WooCommerce
+  ========================================================================== */
+
+function woo_remove_product_tabs($tabs) {
+    unset($tabs['reviews']); // Remove Reviews tab
+    return $tabs;
+}
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+/* ==========================================================================
+   Disable nRelate on WooCommerce
+  ========================================================================== */
+
+function hide_nrelate_from_posts($load_nrelate) {
+  if ( is_woocommerce() ) {
+    $load_nrelate = false;
+  }
+  return $load_nrelate;
+}
+add_filter('nrelate_related_is_loading', 'hide_nrelate_from_posts');
+
+/* ==========================================================================
    Hide Category from Facet
   ========================================================================== */
 
