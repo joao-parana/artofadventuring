@@ -1,7 +1,7 @@
 <footer class="content-info" role="contentinfo">
   <div class="container">
 	  <div class="col-md-6">
-		  <?php wp_nav_menu(array('theme_location' => 'footer_navigation', 'after' => '<span class="delimiter">//</span>', 'menu_class' => 'footer-navbar')); ?>
+		  <?php wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'footer-navbar')); ?>
 		  <div class="clearfix"></div>
 	    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 	  </div>
